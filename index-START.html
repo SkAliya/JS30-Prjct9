@@ -27,7 +27,7 @@
       // Styled
       console.log(
         "%c im styling substituer",
-        "font-size:10px;background:red;text-shadow:10px 10px 0 blue"
+        "font-size:50px;background:red;text-shadow:10px 10px 0 blue"
       );
       // warning!
       console.warn("this is warning mssg");
@@ -40,11 +40,12 @@
       const p = document.querySelector("p");
       console.assert(p.classList.contains("repo"), "shut im not class of p");
       // clearing
-      console.clear();
+      // console.clear();
       // Viewing DOM Elements
       console.dir(p);
       // Grouping together
       dogs.forEach((dog) => {
+        console.group(`${dog.name}`);
         console.groupCollapsed(`${dog.name}`);
         console.log(`This is ${dog.name}`);
         console.log(`${dog.name} is ${dog.age} years old`);
@@ -67,7 +68,7 @@
       console.count("Steve");
       // timing
       console.time("fetching data");
-      fetch("https://api.github.com/users/wesbos")
+      fetch("https://api.github.com/users/SkAliya")
         .then((data) => data.json())
         .then((data) => {
           console.timeEnd("fetching data");
